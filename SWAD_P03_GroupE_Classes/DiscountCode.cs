@@ -16,6 +16,7 @@ public class DiscountCode
     {
     }
 
+    public DiscountCode(string discountID, string disccode, string discountType, float discountValue)
     public DiscountCode(string disccode, string discountType, float discountValue)
     {
         DiscountID = Guid.NewGuid().ToString();
