@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SWAD_P03_GroupE_Classes;
 public class DiscountCode
 {
-    public int DiscountID { get; set; }
+    public string DiscountID { get; set; }
     public string DiscCode { get; set; } // Renamed to avoid confusion with class name
     public string DiscountType { get; set; }
     public float DiscountValue { get; set; } // Can be percentage or flat value based on DiscountType
@@ -16,9 +16,9 @@ public class DiscountCode
     {
     }
 
-    public DiscountCode(int discountID, string disccode, string discountType, float discountValue)
+    public DiscountCode(string disccode, string discountType, float discountValue)
     {
-        DiscountID = discountID;
+        DiscountID = Guid.NewGuid().ToString();
         DiscCode = disccode;
         DiscountType = discountType;
         DiscountValue = discountValue;
